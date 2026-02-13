@@ -1,14 +1,21 @@
-/* LocalMedia.AI - Landing Page Styles */
+/* LocalMedia.AI - Landing Page Styles
+   Design: 808Alpha Studio / Tim
+   Aesthetic: Editorial, trustworthy, professional B2B
+*/
 
 :root {
-    --primary: #1a56db;
-    --primary-dark: #1e40af;
-    --accent: #10b981;
-    --text: #1f2937;
-    --text-light: #6b7280;
-    --bg: #ffffff;
-    --bg-alt: #f9fafb;
-    --border: #e5e7eb;
+    /* Color palette — sophisticated navy + warm accents */
+    --navy: #1a2e44;
+    --navy-light: #2d4a6f;
+    --slate: #3d4f5f;
+    --gold: #c9a227;
+    --gold-soft: #e8d48a;
+    --cream: #faf8f5;
+    --warm-white: #fffef9;
+    --text: #2c3e4a;
+    --text-muted: #5a6b78;
+    --border: #d8dce0;
+    --border-light: #e8ebe9;
 }
 
 * {
@@ -17,193 +24,306 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--text);
-    background: var(--bg);
-    line-height: 1.6;
+    background: var(--warm-white);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Top accent bar */
+body::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy-light) 50%, var(--gold) 100%);
 }
 
 .container {
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 /* Header */
 header {
     text-align: center;
-    margin-bottom: 4rem;
-    padding-top: 2rem;
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 3.5rem;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    color: var(--text);
+    color: var(--navy);
+    letter-spacing: -0.02em;
 }
 
 .logo .ai {
-    color: var(--primary);
+    color: var(--gold);
+    font-weight: 600;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    margin-bottom: 4rem;
+    padding: 2rem 0 4rem;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
 }
 
 .hero .subtitle {
-    font-size: 1.25rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    max-width: 600px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 540px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.65;
 }
 
 /* Signup Form */
 .signup-form {
-    max-width: 450px;
+    max-width: 440px;
     margin: 0 auto;
 }
 
 .signup-form form {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.625rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .signup-form input[type="email"] {
     flex: 1;
-    min-width: 200px;
-    padding: 0.875rem 1rem;
+    min-width: 220px;
+    padding: 1rem 1.125rem;
     font-size: 1rem;
-    border: 2px solid var(--border);
-    border-radius: 8px;
+    font-family: inherit;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
     outline: none;
-    transition: border-color 0.2s;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .signup-form input[type="email"]:focus {
-    border-color: var(--primary);
+    border-color: var(--navy-light);
+    box-shadow: 0 0 0 3px rgba(26, 46, 68, 0.08);
+}
+
+.signup-form input[type="email"]::placeholder {
+    color: #9ca3af;
 }
 
 .signup-form button {
-    padding: 0.875rem 1.5rem;
+    padding: 1rem 1.75rem;
     font-size: 1rem;
     font-weight: 600;
-    color: white;
-    background: var(--primary);
+    font-family: inherit;
+    color: #fff;
+    background: var(--navy);
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.1s;
 }
 
 .signup-form button:hover {
-    background: var(--primary-dark);
+    background: var(--navy-light);
+}
+
+.signup-form button:active {
+    transform: scale(0.98);
 }
 
 .form-note {
-    font-size: 0.875rem;
-    color: var(--text-light);
-    margin-top: 0.75rem;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: 0.875rem;
     text-align: center;
+    letter-spacing: 0.01em;
 }
 
 /* Value Props */
 .value-props {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-    padding: 2rem;
-    background: var(--bg-alt);
-    border-radius: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 0 0 4rem;
+    padding: 2.25rem 2rem;
+    background: var(--cream);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+}
+
+.prop {
+    text-align: center;
+    padding: 0.5rem;
 }
 
 .prop h3 {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
     margin-bottom: 0.5rem;
 }
 
 .prop p {
-    color: var(--text-light);
-    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* Section divider */
+.about::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0 auto 3rem;
+    border-radius: 2px;
 }
 
 /* About Section */
 .about {
-    margin-bottom: 4rem;
+    padding: 2rem 0 3.5rem;
 }
 
 .about h2 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--navy);
     margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
 }
 
 .about p {
-    margin-bottom: 1rem;
-    color: var(--text-light);
+    margin-bottom: 1.125rem;
+    color: var(--text-muted);
+}
+
+.about p:last-child {
+    margin-bottom: 0;
 }
 
 .about strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.about em {
+    font-style: italic;
     color: var(--text);
 }
 
 /* CTA Section */
 .cta {
     text-align: center;
-    padding: 3rem 2rem;
-    background: var(--bg-alt);
-    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    background: var(--navy);
+    border-radius: 8px;
     margin-bottom: 4rem;
 }
 
 .cta h2 {
     font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
     margin-bottom: 1.5rem;
+}
+
+.cta .signup-form input[type="email"] {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.cta .signup-form input[type="email"]:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.25);
+}
+
+.cta .signup-form button {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.cta .signup-form button:hover {
+    background: var(--gold-soft);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 2rem 0;
-    border-top: 1px solid var(--border);
-    color: var(--text-light);
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
     font-size: 0.875rem;
 }
 
 footer a {
-    color: var(--primary);
+    color: var(--navy-light);
     text-decoration: none;
+    transition: color 0.15s;
 }
 
 footer a:hover {
+    color: var(--navy);
     text-decoration: underline;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 680px) {
+    body {
+        font-size: 16px;
+    }
+
     .container {
-        padding: 1rem;
+        padding: 0 1.25rem;
+    }
+
+    header {
+        padding: 2.5rem 0 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero {
+        padding: 1.5rem 0 3rem;
     }
 
     .hero h1 {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
     .hero .subtitle {
-        font-size: 1rem;
+        font-size: 1.0625rem;
+    }
+
+    .value-props {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .prop {
+        text-align: left;
+        padding: 0;
     }
 
     .signup-form form {
@@ -213,5 +333,45 @@ footer a:hover {
     .signup-form input[type="email"],
     .signup-form button {
         width: 100%;
+        min-width: 0;
+    }
+
+    .cta {
+        padding: 2.5rem 1.5rem;
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        border-radius: 0;
+    }
+
+    .about::before {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Subtle animation on load */
+@media (prefers-reduced-motion: no-preference) {
+    .hero h1,
+    .hero .subtitle,
+    .signup-form {
+        animation: fadeUp 0.6s ease-out both;
+    }
+
+    .hero .subtitle {
+        animation-delay: 0.1s;
+    }
+
+    .signup-form {
+        animation-delay: 0.2s;
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
