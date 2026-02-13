@@ -1,0 +1,217 @@
+/* LocalMedia.AI - Landing Page Styles */
+
+:root {
+    --primary: #1a56db;
+    --primary-dark: #1e40af;
+    --accent: #10b981;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --bg: #ffffff;
+    --bg-alt: #f9fafb;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.logo .ai {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Signup Form */
+.signup-form {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.signup-form form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.signup-form input[type="email"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.signup-form input[type="email"]:focus {
+    border-color: var(--primary);
+}
+
+.signup-form button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.signup-form button:hover {
+    background: var(--primary-dark);
+}
+
+.form-note {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* Value Props */
+.value-props {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: var(--bg-alt);
+    border-radius: 12px;
+}
+
+.prop h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.prop p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* About Section */
+.about {
+    margin-bottom: 4rem;
+}
+
+.about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.about strong {
+    color: var(--text);
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--bg-alt);
+    border-radius: 12px;
+    margin-bottom: 4rem;
+}
+
+.cta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .signup-form form {
+        flex-direction: column;
+    }
+
+    .signup-form input[type="email"],
+    .signup-form button {
+        width: 100%;
+    }
+}

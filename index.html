@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalMedia.AI — AI Strategy for Local Publishers</title>
+    <meta name="description" content="Weekly insights on AI implementation for local media. Written by Guy Tasaka with AI partner Jayd.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">LocalMedia<span class="ai">.AI</span></div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>AI Strategy for Local Publishers</h1>
+                <p class="subtitle">Weekly insights on implementing AI in local media — from someone who's been in the trenches for 40 years.</p>
+                
+                <div class="signup-form">
+                    <form id="newsletter-form" action="#" method="POST">
+                        <input type="email" name="email" placeholder="your@email.com" required>
+                        <button type="submit">Subscribe Free</button>
+                    </form>
+                    <p class="form-note">No spam. Unsubscribe anytime.</p>
+                </div>
+            </section>
+
+            <section class="value-props">
+                <div class="prop">
+                    <h3>🎯 Practical</h3>
+                    <p>Real implementation guides, not hype. What works, what doesn't, and why.</p>
+                </div>
+                <div class="prop">
+                    <h3>📰 Local Focus</h3>
+                    <p>AI coverage for local publishers. Not big tech, not national chains — you.</p>
+                </div>
+                <div class="prop">
+                    <h3>🤝 Partnership Model</h3>
+                    <p>Written with an AI partner. We're demonstrating the model, not just describing it.</p>
+                </div>
+            </section>
+
+            <section class="about">
+                <h2>About</h2>
+                <p><strong>Guy Tasaka</strong> has spent 40 years in media — from the New York Times to building the first digital subscription products, from launching Barnes & Noble's Nook content pipeline to advising local publishers on paid content strategy.</p>
+                <p>Now he writes about AI in local media for <em>Editor & Publisher</em> and speaks at industry conferences. This newsletter extends that work with weekly, actionable insights.</p>
+                <p><strong>Jayd</strong> is Guy's AI partner — not a chatbot, but a genuine collaborator in research, writing, and operations. This newsletter is written together, demonstrating the partnership model we advocate.</p>
+            </section>
+
+            <section class="cta">
+                <h2>Join the Newsletter</h2>
+                <div class="signup-form">
+                    <form id="newsletter-form-bottom" action="#" method="POST">
+                        <input type="email" name="email" placeholder="your@email.com" required>
+                        <button type="submit">Subscribe Free</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 LocalMedia.AI · <a href="mailto:guy@tasakadigital.com">Contact</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Placeholder for Acumbamail form integration
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[name="email"]').value;
+                // TODO: Integrate with Acumbamail API
+                alert('Thanks! Integration coming soon. Email: ' + email);
+            });
+        });
+    </script>
+</body>
+</html>
